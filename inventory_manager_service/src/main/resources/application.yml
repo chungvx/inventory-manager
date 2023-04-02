@@ -12,8 +12,8 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
     url: jdbc:sqlserver://192.168.13.30:1433;databaseName=DB_TEST;queryTimeout=30;cancelQueryTimeout=5;applicationName=${spring.application.name}
-    username: sapo
-    password: 123456a@
+    username: root
+    password: 123456
   jackson:
     property-naming-strategy: SNAKE_CASE
 server:
