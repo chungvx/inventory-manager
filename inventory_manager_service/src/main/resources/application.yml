@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: team3
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+        physical_naming_strategy: "org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl"
+        ddl-auto: update
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://192.168.13.30:1433;databaseName=DB_TEST;queryTimeout=30;cancelQueryTimeout=5;applicationName=${spring.application.name}
+    username: sapo
+    password: 123456a@
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+server:
+  error:
+    include-message: always
+    include-exception: true
+
+my:
+  app:
+    jwtSecret: jwtGrokonezSecretKey
+    jwtExpiration: 86400
